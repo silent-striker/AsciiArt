@@ -4,7 +4,9 @@ import PIL.Image as pil
 def convertToGrayScale(image):
     return image.convert("L")
 
-def resizeImage(image, new_width=200):
+# width has to be reduced so chars are less and the image is clearly visible
+# new_width = 200
+def resizeImage(image, new_width=300):
     width, height = image.size
     ratio = height//width
     new_height = int(new_width*ratio)
