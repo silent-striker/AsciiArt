@@ -6,10 +6,11 @@ def convertToGrayScale(image):
 
 # width has to be reduced so chars are less and the image is clearly visible
 # new_width = 200
-def resizeImage(image, new_width=300):
+def resizeImage(image, new_width=350):
     width, height = image.size
-    ratio = height//width
+    ratio = height/width
     new_height = int(new_width*ratio)
+    # print(width, height)
     return image.resize((new_width, new_height))
 
 def convertPixelToAsciiChar(image):
